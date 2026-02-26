@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liquid Calendar — Support</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #f97316;
+      --border: #e7e5e4;
+      --card-bg: #ffffff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1c1917;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #fb923c;
+        --border: #44403c;
+        --card-bg: #292524;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2rem 1rem;
+      display: flex;
+      justify-content: center;
+    }
+    .container {
+      max-width: 640px;
+      width: 100%;
+    }
+    h1 { font-size: 2rem; margin-bottom: 0.25rem; }
+    .subtitle { color: var(--muted); margin-bottom: 2rem; }
+    h2 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; }
+    p { margin-bottom: 1rem; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+    .card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
+    .card p { color: var(--muted); margin-bottom: 0; font-size: 0.95rem; }
+    .contact-link {
+      display: inline-block;
+      margin-top: 0.5rem;
+      font-weight: 500;
+    }
+    .faq dt {
+      font-weight: 600;
+      margin-top: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+    .faq dd {
+      color: var(--muted);
+      margin-bottom: 1rem;
+      padding-left: 0;
+    }
+    .back-link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Liquid Calendar</h1>
+    <p class="subtitle">Support</p>
+
+    <div class="card">
+      <h3>Contact Us</h3>
+      <p>Have a question, found a bug, or want to request a feature? We'd love to hear from you.</p>
+      <a class="contact-link" href="mailto:mrjoevu@gmail.com">mrjoevu@gmail.com</a>
+    </div>
+
+    <div class="card">
+      <h3>Report an Issue</h3>
+      <p>For bug reports and feature requests, you can also open an issue on GitHub.</p>
+      <a class="contact-link" href="https://github.com/tanglefast23/liquid_calendar_gemini/issues">Open an Issue</a>
+    </div>
+
+    <h2>Frequently Asked Questions</h2>
+    <dl class="faq">
+      <dt>How do I sync my calendar across devices?</dt>
+      <dd>Liquid Calendar syncs automatically when you're signed in. Your events and preferences are stored securely in the cloud and available on all your devices.</dd>
+
+      <dt>Is my data private?</dt>
+      <dd>Yes. We take your privacy seriously. Please review our <a href="privacy-policy.html">Privacy Policy</a> for full details on how your data is handled.</dd>
+
+      <dt>How do I delete my account?</dt>
+      <dd>You can delete your account and all associated data from the app's Settings screen. If you need help, contact us at <a href="mailto:mrjoevu@gmail.com">mrjoevu@gmail.com</a>.</dd>
+
+      <dt>The app is crashing or not loading. What should I do?</dt>
+      <dd>Try force-quitting the app and reopening it. If the issue persists, make sure you're running the latest version from the App Store. Still stuck? Email us and we'll help.</dd>
+
+      <dt>Can I use Liquid Calendar for free?</dt>
+      <dd>Yes. Liquid Calendar is free to download and use. Some premium features may be available via optional in-app purchases.</dd>
+    </dl>
+
+    <a class="back-link" href="index.html">&larr; Back to Legal</a>
+  </div>
+</body>
+</html>
