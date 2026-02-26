@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Liquid Calendar — Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #78716c;
+      --accent: #f97316;
+      --card-bg: #ffffff;
+      --border: #e7e5e4;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1c1917;
+        --text: #fafaf9;
+        --muted: #a8a29e;
+        --accent: #fb923c;
+        --card-bg: #292524;
+        --border: #44403c;
+      }
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.25rem;
+      border-bottom: 1px solid var(--border);
+    }
+    p, li { margin-bottom: 0.75rem; }
+    ul { padding-left: 1.5rem; }
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      margin: 1rem 0;
+    }
+    .card h3 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+    .badge {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      padding: 0.15rem 0.5rem;
+      border-radius: 999px;
+      margin-left: 0.5rem;
+      vertical-align: middle;
+    }
+    .badge-local {
+      background: #dcfce7;
+      color: #166534;
+    }
+    .badge-cloud {
+      background: #dbeafe;
+      color: #1e40af;
+    }
+    @media (prefers-color-scheme: dark) {
+      .badge-local { background: #14532d; color: #86efac; }
+      .badge-cloud { background: #1e3a5f; color: #93c5fd; }
+    }
+    a { color: var(--accent); }
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Liquid Calendar &mdash; Last updated: February 23, 2026</p>
+
+    <p>
+      Liquid Calendar ("the App") is developed by Tanglefast. Your privacy matters.
+      This policy explains what data the App collects, how it is used, and your rights.
+    </p>
+
+    <h2>1. Data We Collect</h2>
+
+    <div class="card">
+      <h3>Calendar Events <span class="badge badge-local">On-Device</span> <span class="badge badge-cloud">Synced</span></h3>
+      <p>
+        The App reads and writes events from your device's native calendar (via Apple Calendar / Google Calendar APIs) to display and manage your schedule.
+        When you create an account and enable sync, your event data (title, date/time, location, notes) is stored in our cloud database to keep your devices in sync.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Voice Input <span class="badge badge-local">On-Device</span></h3>
+      <p>
+        Voice-to-text uses Apple's on-device speech recognition. Audio is processed entirely on your device and is <strong>never sent to our servers or any third party</strong>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Health Data <span class="badge badge-local">On-Device</span></h3>
+      <p>
+        If you grant permission, the App reads sleep data from Apple HealthKit to adjust your morning schedule view.
+        Health data stays on your device and is <strong>never transmitted, stored on our servers, or shared with anyone</strong>.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Account &amp; Authentication <span class="badge badge-cloud">Cloud</span></h3>
+      <p>
+        If you sign in (via Apple Sign-In), we store a minimal profile (user ID, email if provided) in our authentication system powered by Supabase to manage your account.
+      </p>
+    </div>
+
+    <h2>2. Third-Party Services</h2>
+    <p>The App uses the following third-party services, each governed by their own privacy policies:</p>
+    <ul>
+      <li><strong>Supabase</strong> — Authentication and cloud database for synced events. <a href="https://supabase.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
+      <li><strong>RevenueCat</strong> — Subscription and purchase management. Processes purchase receipts only. <a href="https://www.revenuecat.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
+      <li><strong>PostHog</strong> — Anonymous product analytics (disabled in development). <a href="https://posthog.com/privacy" target="_blank" rel="noopener">Privacy Policy</a></li>
+      <li><strong>Sentry</strong> — Crash reporting and performance monitoring (production only). <a href="https://sentry.io/privacy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+    </ul>
+
+    <h2>3. AI &amp; Natural Language Processing</h2>
+    <p>
+      The App uses natural language processing to parse text like "Lunch with Sarah on Friday at noon" into calendar events.
+    </p>
+    <ul>
+      <li>Currently, all text parsing happens <strong>on your device</strong> using built-in libraries. No event text is sent to external servers for processing.</li>
+      <li>
+        In the future, the App may offer optional AI-powered features that send event text to third-party AI providers
+        (such as Google Gemini or similar services) for enhanced natural language understanding.
+        <strong>If introduced, this will require your explicit opt-in consent</strong>, and this policy will be updated before any such feature is enabled.
+      </li>
+      <li>
+        <strong>Your calendar data is never used to train AI models.</strong>
+        Any future AI integrations will use API-only access, which by policy does not use customer data for model training
+        (see <a href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">Google Gemini API Terms</a>).
+      </li>
+    </ul>
+
+    <h2>4. Data Storage &amp; Security</h2>
+    <ul>
+      <li>Cloud data is stored in Supabase (hosted on AWS) with row-level security policies ensuring you can only access your own data.</li>
+      <li>Authentication tokens are stored in your device's secure keychain (iOS Keychain / Android Keystore).</li>
+      <li>All network communication uses HTTPS/TLS encryption.</li>
+    </ul>
+
+    <h2>5. Data Retention &amp; Deletion</h2>
+    <ul>
+      <li>You can delete individual events at any time from within the App.</li>
+      <li>To delete your account and all associated cloud data, contact us at the email below. We will process deletion requests within 30 days.</li>
+      <li>Crash reports and analytics data are retained for 90 days, then automatically purged.</li>
+    </ul>
+
+    <h2>6. Children's Privacy</h2>
+    <p>The App is not directed at children under 13. We do not knowingly collect personal data from children.</p>
+
+    <h2>7. Your Rights</h2>
+    <p>Depending on your jurisdiction, you may have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you</li>
+      <li>Request correction or deletion of your data</li>
+      <li>Withdraw consent for optional data processing</li>
+      <li>Export your data in a portable format</li>
+    </ul>
+
+    <h2>8. Changes to This Policy</h2>
+    <p>
+      We may update this policy from time to time. Material changes will be communicated through the App or via the email associated with your account.
+      The "Last updated" date at the top reflects the most recent revision.
+    </p>
+
+    <h2>9. Contact</h2>
+    <p>
+      Questions or requests? Reach us at:<br />
+      <a href="mailto:privacy@tanglefast.com">privacy@tanglefast.com</a>
+    </p>
+
+    <footer>
+      &copy; 2026 Tanglefast. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
