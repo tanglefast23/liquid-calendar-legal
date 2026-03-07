@@ -23,55 +23,58 @@
         --card-bg: #292524;
       }
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    * { box-sizing: border-box; }
     body {
+      margin: 0;
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
-      padding: 2rem 1rem;
+      padding: 2rem 1rem 3rem;
       display: flex;
       justify-content: center;
     }
     .container {
-      max-width: 640px;
+      max-width: 680px;
       width: 100%;
     }
-    h1 { font-size: 2rem; margin-bottom: 0.25rem; }
-    .subtitle { color: var(--muted); margin-bottom: 2rem; }
-    h2 { font-size: 1.25rem; margin-top: 2rem; margin-bottom: 0.75rem; }
-    p { margin-bottom: 1rem; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.25rem;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
     .card {
       background: var(--card-bg);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 1.25rem;
+      border-radius: 14px;
+      padding: 1.1rem 1.25rem;
       margin-bottom: 1rem;
     }
-    .card h3 { font-size: 1rem; margin-bottom: 0.5rem; }
-    .card p { color: var(--muted); margin-bottom: 0; font-size: 0.95rem; }
-    .contact-link {
-      display: inline-block;
-      margin-top: 0.5rem;
-      font-weight: 500;
+    h2 {
+      font-size: 1.2rem;
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
     }
-    .faq dt {
+    dt {
       font-weight: 600;
-      margin-top: 1.25rem;
+      margin-top: 1rem;
       margin-bottom: 0.25rem;
     }
-    .faq dd {
+    dd {
+      margin-left: 0;
       color: var(--muted);
-      margin-bottom: 1rem;
-      padding-left: 0;
+      margin-bottom: 0.75rem;
     }
-    .back-link {
-      display: inline-block;
-      margin-top: 2rem;
-      color: var(--muted);
-      font-size: 0.9rem;
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -81,36 +84,35 @@
     <p class="subtitle">Support</p>
 
     <div class="card">
-      <h3>Contact Us</h3>
-      <p>Have a question, found a bug, or want to request a feature? We'd love to hear from you.</p>
-      <a class="contact-link" href="mailto:mrjoevu@gmail.com">mrjoevu@gmail.com</a>
+      <strong>Email support</strong>
+      <p>If you found a bug, need help with a calendar issue, or have a billing question, email <a href="mailto:mrjoevu@gmail.com">mrjoevu@gmail.com</a>.</p>
     </div>
 
     <div class="card">
-      <h3>Report an Issue</h3>
-      <p>For bug reports and feature requests, you can also open an issue on GitHub.</p>
-      <a class="contact-link" href="https://github.com/tanglefast23/liquid_calendar_gemini/issues">Open an Issue</a>
+      <strong>GitHub issues</strong>
+      <p>For reproducible bugs or feature requests, you can also open an issue at <a href="https://github.com/tanglefast23/liquid_calendar_gemini/issues">github.com/tanglefast23/liquid_calendar_gemini/issues</a>.</p>
     </div>
 
-    <h2>Frequently Asked Questions</h2>
-    <dl class="faq">
-      <dt>How do I sync my calendar across devices?</dt>
-      <dd>Liquid Calendar syncs automatically when you're signed in. Your events and preferences are stored securely in the cloud and available on all your devices.</dd>
+    <h2>Frequently asked questions</h2>
+    <dl>
+      <dt>Does Liquid Calendar have its own cloud sync?</dt>
+      <dd>No. Liquid Calendar reads and writes the calendar accounts already available on your iPhone. If your calendar provider syncs across devices, those changes will appear there.</dd>
 
-      <dt>Is my data private?</dt>
-      <dd>Yes. We take your privacy seriously. Please review our <a href="privacy-policy.html">Privacy Policy</a> for full details on how your data is handled.</dd>
+      <dt>Does the app require an account?</dt>
+      <dd>No. The shipped app does not have a Liquid Calendar account system.</dd>
 
-      <dt>How do I delete my account?</dt>
-      <dd>You can delete your account and all associated data from the app's Settings screen. If you need help, contact us at <a href="mailto:mrjoevu@gmail.com">mrjoevu@gmail.com</a>.</dd>
+      <dt>How do subscriptions work?</dt>
+      <dd>Premium access is handled through Apple in-app purchases and RevenueCat. You can restore purchases from the paywall and manage or cancel them through Apple’s subscription settings.</dd>
 
-      <dt>The app is crashing or not loading. What should I do?</dt>
-      <dd>Try force-quitting the app and reopening it. If the issue persists, make sure you're running the latest version from the App Store. Still stuck? Email us and we'll help.</dd>
+      <dt>How do I remove Google Calendar access?</dt>
+      <dd>Use the disconnect action inside the app to remove the local Google connection. You can also revoke access from your Google account security settings.</dd>
 
-      <dt>Can I use Liquid Calendar for free?</dt>
-      <dd>Yes. Liquid Calendar is free to download and use. Some premium features may be available via optional in-app purchases.</dd>
+      <dt>What if reminders are not showing?</dt>
+      <dd>Check that notifications are enabled in iOS Settings and that the event itself has an alert configured.</dd>
+
+      <dt>The app is not loading my events. What should I check?</dt>
+      <dd>Make sure Liquid Calendar still has calendar permission in iOS Settings and that the calendar you expect is selected inside the app.</dd>
     </dl>
-
-    <a class="back-link" href="index.html">&larr; Back to Legal</a>
   </div>
 </body>
 </html>
